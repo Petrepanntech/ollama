@@ -261,7 +261,7 @@ func (a *app) handleRegister(w http.ResponseWriter, r *http.Request) {
 
 	p.Email = strings.ToLower(strings.TrimSpace(p.Email))
 	if p.Email == "" || len(p.Password) < 8 {
-		writeJSON(w, http.StatusBadRequest, errorResponse{Error: "email and password(min 8 chars) are required"})
+		writeJSON(w, http.StatusBadRequest, errorResponse{Error: "email and password (min 8 chars) are required"})
 		return
 	}
 
